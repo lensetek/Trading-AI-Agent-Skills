@@ -1,0 +1,52 @@
+# Environment & Secrets (STRICT RULE: Never commit credentials)
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.token
+
+# Local Databases & Financial Data Cache
+*.db
+*.sqlite
+*.sqlite3
+data_cache/
+*.parquet
+*.feather
+*.csv
+!examples/*.csv
+
+# Generated Excel Journals & Reports
+*.xlsx
+*.xls
+reports/output/
+export/
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# Browser Automation & Session Caches (CDP / Playwright)
+browser_profiles/
+user_data_dir/
+*.log
+playwright-report/
+test-results/
+
+# Node / Web Frontend
+node_modules/
+.npm/
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
