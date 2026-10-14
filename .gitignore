@@ -46,6 +46,9 @@ test-results/
 node_modules/
 .npm/
 
+# OpenCode local agents (auto-generated)
+.opencode/
+
 # OS & Editor Files
 .DS_Store
 Thumbs.db

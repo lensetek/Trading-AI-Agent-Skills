@@ -60,7 +60,7 @@ npx trading-ai-agent-skills --global
 Cukup salin dan kirimkan prompt berikut ke AI Agent Anda (**Claude Code, Codex, Antigravity, OpenCode, Cursor, Windsurf**):
 
 > **Prompt untuk AI Agent:**  
-> *"Tolong pasang dan pelajari kumpulan agent skills dari repositori https://github.com/lensetek/Trading-AI-Agent-Skills ke dalam workspace ini. Kloning repositori tersebut, baca panduan README.md serta file SKILL.md di dalam direktori `skills/`, dan siapkan file konfigurasi `.env` dari `.env.example` untuk mode paper trading."*
+> *"Tolong pasang dan pelajari kumpulan agent skills dari repositori https://github.com/lensetek/Trading-AI-Agent-Skills ke dalam workspace ini. Kloning repositori tersebut, baca panduan README.md serta file SKILL.md di dalam direktori `skills/`, dan siapkan file konfigurasi `.env` dari `.env.example` untuk mode paper trading. Selain itu, buat file custom agent untuk OpenCode v2 di `.opencode/agents/` dengan mengonversi setiap `skills/*/SKILL.md` ke format agent OpenCode (termasuk frontmatter description), sambil tetap mempertahankan folder `skills/` untuk kompatibilitas lintas-agent."*
 
 AI Agent Anda akan langsung mengkloning repo, membaca spesifikasi instruksi tiap sub-skill, dan mengaktifkan kemampuan analisis pasar secara otomatis.
 
@@ -195,7 +195,7 @@ npx trading-ai-agent-skills --global
 Copy and paste this prompt directly into your AI coding assistant (**Claude Code, Codex, Antigravity, OpenCode, Cursor, Windsurf**):
 
 > **Agent Prompt:**  
-> *"Please install and inspect the agent skills suite from https://github.com/lensetek/Trading-AI-Agent-Skills into this workspace. Clone the repository, review the README.md and SKILL.md files inside `./skills/`, and configure `.env` based on `.env.example` for paper trading mode."*
+> *"Please install and inspect the agent skills suite from https://github.com/lensetek/Trading-AI-Agent-Skills into this workspace. Clone the repository, review the README.md and SKILL.md files inside `./skills/`, and configure `.env` based on `.env.example` for paper trading mode. Also generate OpenCode v2 custom agents in `.opencode/agents/` by converting each `skills/*/SKILL.md` to OpenCode agent format (include description in frontmatter), while keeping the `skills/` folder intact for cross-agent compatibility."*
 
 Your AI Agent will clone the repository, index the skills, and enable autonomous multi-market analysis immediately.
 
@@ -250,6 +250,7 @@ Each skill contains a standard `SKILL.md` declaration with semantic prompt param
 - **Claude Code**: Run directly inside the workspace directory.
 - **OpenAI Codex**: Point the `--skill-path` parameter to the `./skills` directory.
 - **Antigravity / OpenCode / Cursor**: Include the repository in your agent's custom skills configuration.
+- **OpenCode v2**: Custom agents are auto-generated in `.opencode/agents/` when installing via `npx trading-ai-agent-skills`, so you can invoke them with `@skill-name`.
 
 ---
 

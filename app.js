@@ -338,8 +338,11 @@ antigravity plugin add https://github.com/lensetek/Trading-AI-Agent-Skills`,
 # Metode 1: Pasang via NPX Skills
 npx skills install https://github.com/lensetek/Trading-AI-Agent-Skills
 
+# Setelah terinstal, custom agents akan ter-generate otomatis
+# di .opencode/agents/ → Bisa dipanggil dengan @<skill-name>
+
 # Metode 2: Beri prompt ke agent:
-"Pasang agent skills dari https://github.com/lensetek/Trading-AI-Agent-Skills dan siapkan paper trading."`
+"Pasang agent skills dari https://github.com/lensetek/Trading-AI-Agent-Skills dan siapkan paper trading. Buat juga file agent untuk OpenCode v2 di .opencode/agents/ sambil tetap mempertahankan folder skills/ untuk kompatibilitas lintas-agent."`
 };
 
 function initInstallTabs() {
