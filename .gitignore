@@ -12,6 +12,7 @@ secrets/
 *.sqlite
 *.sqlite3
 data_cache/
+.cache/
 *.parquet
 *.feather
 *.csv

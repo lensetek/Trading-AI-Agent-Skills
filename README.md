@@ -79,7 +79,7 @@ cp .env.example .env
 
 ---
 
-### 3. Daftar 11 Modul Sub-Skills
+### 3. Daftar 12 Modul Sub-Skills
 
 ```
 skills/
@@ -93,7 +93,8 @@ skills/
 ├── technical-analyst/             # Price action, indikator klasik, SMC/ICT liquidity
 ├── fundamental-macro-analyst/     # Rasio lapkeu, valuasi emiten & korelasi makro (DXY/Yield)
 ├── paper-trading-engine/          # Simulator portofolio, trailing stop & ekspor Excel .xlsx
-└── mobile-chart-server/           # Web dashboard lokal responsif (Mobile-View First)
+├── mobile-chart-server/           # Web dashboard lokal responsif (Mobile-View First)
+└── agent-update-manager/          # Auto-updater 24 jam sekali dari GitHub resmi
 ```
 
 | Modul | Peran & Kemampuan Utama |
@@ -109,6 +110,7 @@ skills/
 | **`fundamental-macro-analyst`** | Menghitung rasio keuangan (PER, PBV, ROE, DER, DCF) dan menganalisis korelasi antar pasar (DXY vs Rupiah vs IHSG vs Yield US Treasury). |
 | **`paper-trading-engine`** | Menjalankan simulasi transaksi lokal (SQLite), kalkulasi fee dan slippage realistis, manajemen trailing stop, dan otomatis membuat berkas **Excel (`.xlsx`)**. |
 | **`mobile-chart-server`** | Server dashboard lokal mandiri berbasis FastAPI + TradingView Lightweight Charts dengan tampilan responsif berorientasi **Mobile-View First**. |
+| **`agent-update-manager`** | Pengecekan pembaruan otomatis ke GitHub resmi 1x sehari (24h throttle cache) dengan proteksi kredensial .env dan konfirmasi pengguna. |
 
 ---
 
@@ -207,7 +209,7 @@ cp .env.example .env
 
 ---
 
-### 3. Suite of 11 Modular Skills
+### 3. Suite of 12 Modular Skills
 
 | Module | Core Purpose & Capabilities |
 | :--- | :--- |
@@ -222,6 +224,7 @@ cp .env.example .env
 | **`fundamental-macro-analyst`** | Evaluates financial ratios (P/E, P/B, ROE, D/E, DCF) and analyzes intermarket macro correlations (DXY vs IDR vs Treasury Yields). |
 | **`paper-trading-engine`** | Local trade simulator (SQLite), realistic fee/slippage modeling, dynamic trailing stop tracker, and automated **Excel (`.xlsx`)** journal generation. |
 | **`mobile-chart-server`** | Standalone local web server powered by FastAPI + TradingView Lightweight Charts optimized for **Mobile-View First** touch interfaces. |
+| **`agent-update-manager`** | Automated once-a-day update checker from GitHub (24h throttle cache) with strict credential isolation and human confirmation. |
 
 ---
 

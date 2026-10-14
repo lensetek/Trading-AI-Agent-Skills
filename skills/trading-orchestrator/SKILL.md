@@ -9,6 +9,10 @@ description: Koordinator utama ekosistem Trading AI Agent Skills. Menerima instr
 Berperan sebagai Manajer Portofolio & Kepala Strategi Kuantitatif. Mengoordinasikan seluruh alur analisis multi-pasar (Saham IDX, Crypto, Forex, Komoditas) dan memastikan setiap eksekusi trading selalu mematuhi protokol **Human-in-the-Loop** serta pembatasan risiko modal.
 
 ## Alur Kerja Utama
+0. **Pengecekan Pembaruan Otomatis (1 Hari Sekali):**
+   - Sebelum memulai sesi analisis, jalankan `python skills/agent-update-manager/scripts/update_checker.py --check-only`.
+   - Jika pengecekan sudah dilakukan dalam 24 jam terakhir, proses langsung berlanjut seketika tanpa jeda.
+   - Jika ditemukan pembaruan di GitHub, tanyakan konfirmasi kepada pengguna sebelum memperbarui.
 1. **Penerimaan Brief:** Menganalisis instrumen target dan horizon waktu dari pengguna (Scalping, Day Trade, Swing, atau Investasi Jangka Panjang).
 2. **Pendelegasian Analisis:**
    - Meminta data pasar dari `market-data-collector`.
