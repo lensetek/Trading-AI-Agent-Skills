@@ -46,8 +46,9 @@ test-results/
 node_modules/
 .npm/
 
-# OpenCode local agents (auto-generated)
-.opencode/
+# OpenCode local agents (preserve agents directory for version control)
+.opencode/*
+!.opencode/agents/
 
 # OS & Editor Files
 .DS_Store

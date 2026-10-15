@@ -1,6 +1,6 @@
 {
   "name": "trading-ai-agent-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Modular quantitative and multi-market trading agent skills suite for Saham IDX, Crypto, Forex, and Commodities with Google TimesFM, CFTC COT, and Paper Trading engine.",
   "main": "bin/install.js",
   "bin": {

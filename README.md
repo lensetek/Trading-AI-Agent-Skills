@@ -12,20 +12,35 @@
 ---
 
 ### 🌐 Language Quick Navigation / Pintasan Bahasa
+* **🚀 [What's New in v1.1.0 / Apa yang Baru di v1.1.0](#-whats-new-in-v110--apa-yang-baru-di-v110)**
 * **🇮🇩 [Bahasa Indonesia](#-bahasa-indonesia)**
   * [1. Ringkasan Eksekutif](#1-ringkasan-eksekutif)
   * [2. Cara Pemasangan Agent Skills (How to Install)](#2-cara-pemasangan-agent-skills-how-to-install)
-  * [3. Daftar 11 Modul Sub-Skills](#3-daftar-11-modul-sub-skills)
+  * [3. Daftar 13 Modul Sub-Skills](#3-daftar-13-modul-sub-skills)
   * [4. Fitur Unggulan Institusional](#4-fitur-unggulan-institusional)
   * [5. Penggunaan Lintas Agen AI](#5-penggunaan-lintas-agen-ai)
   * [6. Keamanan Kredensial & Manajemen Risiko](#6-keamanan-kredensial--manajemen-risiko)
 * **🇬🇧 [English](#-english)**
   * [1. Executive Summary](#1-executive-summary)
   * [2. How to Install Agent Skills](#2-how-to-install-agent-skills)
-  * [3. Suite of 11 Modular Skills](#3-suite-of-11-modular-skills)
+  * [3. Suite of 13 Modular Skills](#3-suite-of-13-modular-skills)
   * [4. Institutional-Grade Features](#4-institutional-grade-features)
   * [5. Cross-Agent Usage](#5-cross-agent-usage)
   * [6. Credential Safety & Risk Management](#6-credential-safety--risk-management)
+
+---
+
+### 🚀 What's New in v1.1.0 / Apa yang Baru di v1.1.0
+
+* **✨ Sub-Skill Baru ke-13: `backtest-strategy-optimizer`**
+  * **Vectorized Backtesting Engine**: Mesin simulasi historis berkecepatan tinggi dengan pemodelan biaya bursa nyata (Saham IDX 0.15% beli, 0.25% jual incl. PPh final; maker/taker fee Crypto) serta slippage spread.
+  * **Genetic Algorithm (GA) Optimization**: Algoritma pencarian parameter global heuristik (kromosom = parameter, seleksi elitisme, crossover, & mutasi adaptif) agar tidak terjebak di lokal optimum.
+  * **Walk-Forward Analysis (WFA / WFO)**: Validasi *In-Sample* (optimasi) vs *Out-of-Sample* (uji buta bergulir) lengkap dengan metrik *Walk-Forward Efficiency (WFE)* untuk membasmi *curve-fitting* / *overfitting*.
+  * **Monte Carlo Simulation (2.500+ Runs)**: Pengacakan urutan transaksi (*Trade Reshuffling / Bootstrap*) + injeksi kejutan slippage acak untuk mengukur *Risk of Ruin* dan rentang *95% & 99% Confidence Interval Maximum Drawdown*.
+* **🛠️ Pre-Code Siap Pakai & CLI Runner**:
+  * Tersedia script modular mandiri di [`skills/backtest-strategy-optimizer/scripts/backtest_optimizer.py`](file:///c:/Users/ACER/Documents/GitHub/Trading%20AI%20Agent%20Skills/skills/backtest-strategy-optimizer/scripts/backtest_optimizer.py) yang dapat di-import atau dijalankan via CLI (`python backtest_optimizer.py --demo` atau `--csv <path>`).
+* **🤖 Dukungan OpenCode v2**:
+  * Ditambahkan `.opencode/agents/backtest-strategy-optimizer.md` dan integrasi pipeline orkestrasi kuantitatif di `trading-orchestrator`.
 
 ---
 
@@ -79,12 +94,13 @@ cp .env.example .env
 
 ---
 
-### 3. Daftar 12 Modul Sub-Skills
+### 3. Daftar 13 Modul Sub-Skills
 
 ```
 skills/
 ├── trading-orchestrator/          # Koordinator utama alur analisis & strategi
 ├── market-data-collector/         # Pengunduh data multi-market (IDX, Yahoo Fin, CCXT)
+├── backtest-strategy-optimizer/   # Backtest vektorisasi, Genetic Algorithm, WFO, & Monte Carlo
 ├── browser-tape-interceptor/      # Sadap running trade web broker via Chrome CDP
 ├── orderflow-tape-scalper/        # Analisis tape reading, bid/ask depth, bandarmologi
 ├── timesfm-forecaster/            # AI Time Series Foundation Model Google TimesFM
@@ -101,6 +117,7 @@ skills/
 | :--- | :--- |
 | **`trading-orchestrator`** | Router pusat yang menerima instruksi bebas, mendistribusikan tugas ke spesialis, dan menyusun laporan trading plan utuh. |
 | **`market-data-collector`** | Mengambil data harga historis dan intraday untuk Saham IDX, Crypto (Binance/Indodax via CCXT), Forex, dan Komoditas. |
+| **`backtest-strategy-optimizer`** | Backtesting vektorisasi cepat, optimasi parameter Genetic Algorithm (GA), validasi Walk-Forward (WFA), dan stress test 2.500+ iterasi Monte Carlo. |
 | **`browser-tape-interceptor`** | Menempelkan (*attach*) sesi browser pengguna via Chrome DevTools Protocol (CDP) untuk menangkap WebSocket running trade tanpa menyentuh password Anda. |
 | **`orderflow-tape-scalper`** | Membaca tape secara real-time: deteksi *Hajar Kanan (Haka)* volume masif, *Iceberg Orders*, *Fake Bid/Ask*, dan *Broker Summary* (Bandarmologi). |
 | **`timesfm-forecaster`** | Menjalankan model AI **Google TimesFM** (PyTorch) untuk membuat proyeksi pergerakan harga ke depan dan menghitung quantile probabilitas (P10, P50, P90). |
@@ -209,12 +226,13 @@ cp .env.example .env
 
 ---
 
-### 3. Suite of 12 Modular Skills
+### 3. Suite of 13 Modular Skills
 
 | Module | Core Purpose & Capabilities |
 | :--- | :--- |
 | **`trading-orchestrator`** | Master dispatcher receiving natural instructions, routing tasks to specialist skills, and compiling complete trading plans. |
 | **`market-data-collector`** | Fetches historical and intraday market data for IDX Indonesian Stocks, Crypto (via CCXT), Forex, and Global Commodities. |
+| **`backtest-strategy-optimizer`** | High-speed vectorized backtesting, Genetic Algorithm (GA) parameter optimization, Walk-Forward Analysis (WFA), and 2,500+ run Monte Carlo stress testing. |
 | **`browser-tape-interceptor`** | Attaches to user's existing Chrome browser session via Chrome DevTools Protocol (CDP) to sniff running trade WebSockets safely. |
 | **`orderflow-tape-scalper`** | Real-time tape reading: detects aggressive volume sweeps, Iceberg orders, Bid/Ask imbalances, and Broker Summary (Bandarmologi). |
 | **`timesfm-forecaster`** | Runs **Google Research TimesFM** (PyTorch) for zero-shot time-series forecasting and probabilistic quantile bands (P10, P50, P90). |

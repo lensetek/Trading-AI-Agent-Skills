@@ -30,8 +30,9 @@
 
       <nav class="nav-links">
         <a href="#hero" class="nav-link">Home</a>
+        <a href="#whats-new" class="nav-link">What's New</a>
         <a href="#simulation" class="nav-link">Interactive Demo</a>
-        <a href="#skills" class="nav-link">11 Sub-Skills</a>
+        <a href="#skills" class="nav-link">13 Sub-Skills</a>
         <a href="#features" class="nav-link">TimesFM & COT</a>
         <a href="#security" class="nav-link">Security Protocol</a>
         <a href="#install" class="nav-link">Install Guide</a>
@@ -46,7 +47,7 @@
     <section id="hero" class="hero">
       <div class="container hero-content">
         <div>
-          <span class="badge badge-blue" data-i18n="heroTag">UNIVERSAL AGENT SKILLS SUITE v1.0</span>
+          <span class="badge badge-blue" data-i18n="heroTag">UNIVERSAL AGENT SKILLS SUITE v1.1.0</span>
         </div>
 
         <h1 class="hero-headline" data-i18n="heroTitle">
@@ -54,7 +55,7 @@
         </h1>
 
         <p class="hero-description" data-i18n="heroDesc">
-          Memberi Claude Code, OpenAI Codex, Antigravity, dan OpenCode kemampuan menyadap running trade browser, memproyeksikan harga dengan Google TimesFM, membaca posisi institusi CFTC COT, dan simulasi Paper Trading aman dengan ekspor otomatis ke Excel.
+          Memberi Claude Code, OpenAI Codex, Antigravity, dan OpenCode kemampuan menyadap running trade browser, memproyeksikan harga dengan Google TimesFM, membaca posisi institusi CFTC COT, optimasi backtesting Genetic Algorithm & Monte Carlo, serta simulasi Paper Trading aman dengan ekspor otomatis ke Excel.
         </p>
 
         <div class="command-box">
@@ -63,14 +64,14 @@
         </div>
 
         <div class="hero-cta">
-          <a href="#skills" class="btn btn-primary btn-block" data-i18n="btnExplore">Jelajahi 11 Skills</a>
-          <a href="#simulation" class="btn btn-outline btn-block" data-i18n="btnDemo">Coba Simulasi Interaktif</a>
+          <a href="#skills" class="btn btn-primary btn-block" data-i18n="btnExplore">Jelajahi 13 Skills</a>
+          <a href="#whats-new" class="btn btn-outline btn-block">🚀 What's New v1.1.0</a>
         </div>
 
         <!-- Metric Stat Badges (High-Contrast White Cards) -->
         <div class="stat-pills">
           <div class="stat-pill-item">
-            <span class="stat-num">12</span>
+            <span class="stat-num">13</span>
             <span class="stat-label" data-i18n="statSkillsSub">Modular Skills</span>
           </div>
           <div class="stat-pill-item">
@@ -85,6 +86,53 @@
             <span class="stat-num">IDX + Multi</span>
             <span class="stat-label" data-i18n="statMarketSub">Stocks, Crypto, Futures</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2.5 WHAT'S NEW IN v1.1.0 (Backtest & Strategy Optimizer)
+         ========================================================================= -->
+    <section id="whats-new" class="container" style="margin-top: -1rem; margin-bottom: 2.5rem;">
+      <div class="feature-block" style="border: 2.5px solid var(--primary-blue); background: linear-gradient(180deg, #ffffff 0%, var(--primary-bg) 100%);">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge badge-blue">WHAT'S NEW IN v1.1.0</span>
+            <span class="badge badge-green">13TH SUB-SKILL ADDED</span>
+            <span class="badge badge-purple">QUANTITATIVE VALIDATION</span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Release: October 2026</span>
+        </div>
+
+        <h2 style="font-size: 1.45rem; color: var(--text-main); margin-bottom: 0.5rem;">
+          ⚡ Backtest Strategy Optimizer: Genetic Algorithm, WFO & Monte Carlo
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
+          Telah ditambahkan sub-skill kuantitatif ke-13 <code>backtest-strategy-optimizer</code> untuk membasmi <em>curve-fitting</em> (overfitting) sebelum strategi diajukan ke paper trading atau live execution.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; margin-bottom: 1.25rem;">
+          <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
+            <div style="font-weight: 800; color: var(--primary-blue); font-size: 0.95rem; margin-bottom: 0.25rem;">🧬 Genetic Algorithm (GA)</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Optimasi parameter global berbasis evolusi (kromosom, seleksi elitisme, crossover, & mutasi adaptif) untuk menghindari lokal optimum.</div>
+          </div>
+          <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
+            <div style="font-weight: 800; color: var(--success-green); font-size: 0.95rem; margin-bottom: 0.25rem;">🔄 Walk-Forward Analysis (WFA)</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Validasi In-Sample (70%) vs Out-of-Sample (30%) bergulir dengan metrik Walk-Forward Efficiency (WFE) anti-overfitting.</div>
+          </div>
+          <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
+            <div style="font-weight: 800; color: var(--purple-accent); font-size: 0.95rem; margin-bottom: 0.25rem;">🎲 Monte Carlo 2.500+ Runs</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Pengacakan urutan transaksi (Bootstrap) & slippage shock guna mengukur Risk of Ruin serta 95% & 99% Max Drawdown CI.</div>
+          </div>
+          <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
+            <div style="font-weight: 800; color: var(--warning-amber); font-size: 0.95rem; margin-bottom: 0.25rem;">💸 Model Biaya Transaksi Riil</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Memodelkan komisi riil (Saham IDX 0.15% beli, 0.25% jual incl. PPh final; maker/taker crypto) & spread noise.</div>
+          </div>
+        </div>
+
+        <div style="background: var(--code-bg); border-radius: var(--radius-md); padding: 0.85rem 1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem;">
+          <span style="font-family: var(--font-mono); color: var(--code-accent); font-size: 0.85rem;">python skills/backtest-strategy-optimizer/scripts/backtest_optimizer.py --demo</span>
+          <span class="badge badge-dark" style="border: 1px solid var(--code-string); color: var(--code-string); font-size: 0.75rem;">CLI Pre-Code Ready</span>
         </div>
       </div>
     </section>
@@ -226,13 +274,13 @@
     </section>
 
     <!-- =========================================================================
-         4. SKILLS GRID EXPLORER (11 Sub-Skills)
+         4. SKILLS GRID EXPLORER (13 Sub-Skills)
          ========================================================================= -->
     <section id="skills" class="skills-section">
       <div class="container">
         <div class="section-header">
           <span class="badge badge-blue section-tag" data-i18n="skillsTag">ARSITEKTUR LENGKAP</span>
-          <h2 class="section-title" data-i18n="skillsTitle">11 Sub-Skills Kuantitatif Terpadu</h2>
+          <h2 class="section-title" data-i18n="skillsTitle">13 Sub-Skills Kuantitatif Terpadu</h2>
           <p class="section-subtitle" data-i18n="skillsSubtitle">
             Dapat dijalankan satu per satu atau dikoordinasikan secara otomatis oleh Trading Orchestrator.
           </p>
@@ -240,7 +288,7 @@
 
         <!-- Filter category tabs -->
         <div class="skill-filters">
-          <button class="filter-btn active" data-category="all">Semua (12)</button>
+          <button class="filter-btn active" data-category="all">Semua (13)</button>
           <button class="filter-btn" data-category="market">Data & Pasar</button>
           <button class="filter-btn" data-category="ai">AI & TimesFM</button>
           <button class="filter-btn" data-category="tape">Tape & Intercept</button>
@@ -280,6 +328,23 @@
               <li>Saham Bursa Efek Indonesia (IDX)</li>
               <li>CCXT Crypto Multi-Exchange</li>
               <li>Yahoo Finance & Public Data Feeds</li>
+            </ul>
+          </div>
+
+          <!-- 3. backtest-strategy-optimizer -->
+          <div class="skill-card" data-category="risk">
+            <div class="skill-card-top">
+              <div>
+                <h3 class="skill-name">backtest-strategy-optimizer</h3>
+                <span class="skill-path">skills/backtest-strategy-optimizer</span>
+              </div>
+              <span class="badge badge-purple">Quant Optimizer</span>
+            </div>
+            <p class="skill-desc">Mesin backtest vektorisasi cepat dengan optimasi Genetic Algorithm (GA), validasi Walk-Forward (WFA), dan stress testing 2.500+ run Monte Carlo.</p>
+            <ul class="skill-features">
+              <li>Genetic Algorithm (GA) Parameter Search</li>
+              <li>Walk-Forward Analysis (WFE Anti-Overfitting)</li>
+              <li>Monte Carlo Simulation (Risk of Ruin & 95% Max DD)</li>
             </ul>
           </div>
 
@@ -621,8 +686,9 @@ claude
           <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Navigasi Cepat</h4>
           <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
             <li><a href="#hero">Beranda</a></li>
+            <li><a href="#whats-new">What's New (v1.1.0)</a></li>
             <li><a href="#simulation">Simulasi Interaktif</a></li>
-            <li><a href="#skills">Daftar 11 Skills</a></li>
+            <li><a href="#skills">Daftar 13 Skills</a></li>
             <li><a href="README.md">Dokumentasi README.md</a></li>
           </ul>
         </div>
