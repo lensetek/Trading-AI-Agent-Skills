@@ -1,18 +1,44 @@
 ---
 name: orderflow-tape-scalper
-description: Algoritma tape reading dan analisis mikrostruktur order flow. Mendeteksi agresi volume Hajar Kanan (Haka), Hajar Kiri (Haki), akumulasi/distribusi senyap (Iceberg Orders), manipulasi Fake Bid/Ask, dan Broker Summary (Bandarmologi).
+description: Algoritma tape reading, deteksi mikrostruktur order flow, serta identifikasi manipulasi pasar (Coordinated Trading, Wash Sale, Circular Cross-Trading, Fake Bid/Ask Spoofing, dan Bandarmologi).
 ---
 
 # Orderflow & Tape Scalper Skill
 
 ## Ringkasan Peran
-Spesialis mikrostruktur transaksi jangka pendek (scalping dan tape reading). Menerima aliran data live dari `browser-tape-interceptor` dan menghitung metrik ketidakseimbangan order (*orderbook imbalance*) secara matematis.
+Spesialis mikrostruktur transaksi dan integritas likuiditas (*tape reading*). Bertugas membedakan antara **permintaan beli/jual riil yang sehat** dengan **likuiditas artifisial manipulatif** (seperti transaksi terkoordinasi/cuci volume yang dibidik regulator dan MSCI). Menerima aliran data live dari `browser-tape-interceptor` atau feed bursa.
 
-## Fitur Deteksi
-1. **Haka / Haki Aggressor Sweeps:**
-   - Menghitung rasio volume beli agresif di sisi Offer/Ask (*Haka*) vs volume jual agresif di sisi Bid (*Haki*).
-   - Memunculkan sinyal momentum saat lonjakan volume melebihi 3x rata-rata moving volume 5 menit terakhir.
-2. **Iceberg Order Detection:**
-   - Mendeteksi transaksi berulang di satu titik harga yang menyerap lot raksasa tanpa menggeser harga turun (*absorption*).
-3. **Bandarmologi & Broker Summary (Khusus Saham IDX):**
-   - Menganalisis konsentrasi transaksi broker institusi/asing (misal: kode broker ZP, CS, BK, RX, AK) untuk mengidentifikasi apakah saham sedang diakumulasi bandar atau didistribusikan ke ritel.
+## Fitur Deteksi Kuantitatif
+
+### 1. Coordinated Trading & Wash Sale Detection Module (Anti-Manipulasi)
+* **Circular Cross-Trading Identifier**:
+  - Mendeteksi transaksi bolak-balik antara broker/rekening terafiliasi yang sama pada pasar reguler tanpa perubahan kepemilikan manfaat nyata.
+  - Menghitung **Wash Volume Ratio (WVR)**: Persentase volume harian yang terkonsentrasi hanya pada $\le 3$ pasang broker utama.
+* **Fake Liquidity Filter (Penolak Sinyal Palsu)**:
+  - Jika suatu saham mencetak volume tinggi tetapi WVR $> 60\%$ (volume buatan demi mengejar syarat likuiditas ATVR MSCI), sistem otomatis menolak sinyal dan menerbitkan peringatan:
+  - `🚨 MANIPULATED VOLUME / COORDINATED TRADING DETECTED - REJECT SIGNAL`.
+
+### 2. Orderbook Spoofing & Layering Protection
+* **Fake Bid/Ask Wall Detection**:
+  - Mengukur kecepatan pembatalan order (*Order Cancellation Rate*).
+  - Jika dinding bid tebal ditarik mendadak ($>80\%$ dibatalkan dalam waktu $<2$ detik sebelum harga mendekat), sistem mengidentifikasi itu sebagai umpan pancingan (*spoofing/layering*) untuk menjebak ritel.
+
+### 3. Haka / Haki Aggressor Sweeps (Volume Riil)
+* **Delta Imbalance**:
+  - Menghitung rasio volume beli agresif menyapu sisi Offer/Ask (*Haka*) vs volume jual agresif menghantam sisi Bid (*Haki*).
+  - Mengonfirmasi momentum *breakout* hanya jika didukung oleh *Cumulative Volume Delta (CVD)* positif riil yang menyebar di berbagai broker independen.
+
+### 4. Iceberg Order & Absorption Detection
+* **Passive Accumulation Tracking**:
+  - Mendeteksi transaksi berulang di satu titik harga yang menyerap lot raksasa tanpa menggeser harga turun (*absorption*).
+  - Menandai area ini sebagai *High-Probability Institutional Support Level*.
+
+### 5. Bandarmologi & Broker Summary (IDX & Crypto CEX/DEX)
+* **Saham IDX**: Mengukur indeks konsentrasi pembeli terbesar (Top 1, Top 3, Top 5 Broker) vs penjual untuk memetakan fase Akumulasi vs Distribusi bandar.
+* **Crypto Orderflow**: Mendeteksi pola *synthetic wash trading* oleh bot market maker di bursa CEX/DEX untuk menyaring koin dengan likuiditas semu.
+
+## Standar Output Integrasi
+Menghasilkan metrik integritas orderflow:
+* `Orderflow Status`: `[ACCUMULATION]` / `[DISTRIBUTION]` / `[SPOOFING TRAP]` / `[WASH TRADE]`
+* `Genuine Liquidity Score`: 0 - 100% (Tingkat keaslian volume transaksi)
+* `Aggressor Ratio`: Rasio Haka : Haki

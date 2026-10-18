@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Trading AI Agent Skills | Quantitative & Multi-Market Suite</title>
-  <meta name="description" content="Koleksi modular agent skills untuk analisis kuantitatif dan trading mandiri Saham IDX, Crypto, Forex, Komoditas dengan Google TimesFM, CFTC COT, dan Paper Trading Excel.">
+  <title>Trading AI Agent Skills | Institutional Quantitative & Multi-Market Suite</title>
+  <meta name="description" content="Koleksi modular agent skills kuantitatif kelas institusi untuk Claude Code, Codex, Antigravity, dan OpenCode: Google TimesFM, MSCI/COT Benchmark, Coordinated Trading Detector, dan Paper Trading lokal.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- =========================================================================
-       1. NAVIGATION BAR (Mobile-First)
+       1. NAVIGATION BAR (Mobile-First & Sticky)
        ========================================================================= -->
   <header class="navbar">
     <div class="container nav-container">
@@ -30,24 +30,25 @@
 
       <nav class="nav-links">
         <a href="#hero" class="nav-link">Home</a>
-        <a href="#whats-new" class="nav-link">What's New</a>
-        <a href="#simulation" class="nav-link">Interactive Demo</a>
+        <a href="#whats-new" class="nav-link">What's New v1.2.0</a>
+        <a href="#architecture" class="nav-link">Tri-Layer Engine</a>
         <a href="#skills" class="nav-link">13 Sub-Skills</a>
-        <a href="#features" class="nav-link">TimesFM & COT</a>
-        <a href="#security" class="nav-link">Security Protocol</a>
-        <a href="#install" class="nav-link">Install Guide</a>
+        <a href="#benchmarks" class="nav-link">Global Benchmarks</a>
+        <a href="#chart-server" class="nav-link">Chart Server CLI</a>
+        <a href="#security" class="nav-link">Keamanan</a>
+        <a href="#install" class="nav-link">Instalasi</a>
       </nav>
     </div>
   </header>
 
-  <!-- =========================================================================
-       2. HERO SECTION
-       ========================================================================= -->
   <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
     <section id="hero" class="hero">
       <div class="container hero-content">
         <div>
-          <span class="badge badge-blue" data-i18n="heroTag">UNIVERSAL AGENT SKILLS SUITE v1.1.0</span>
+          <span class="badge badge-blue" data-i18n="heroTag">UNIVERSAL AGENT SKILLS SUITE v1.2.0</span>
         </div>
 
         <h1 class="hero-headline" data-i18n="heroTitle">
@@ -55,7 +56,7 @@
         </h1>
 
         <p class="hero-description" data-i18n="heroDesc">
-          Memberi Claude Code, OpenAI Codex, Antigravity, dan OpenCode kemampuan menyadap running trade browser, memproyeksikan harga dengan Google TimesFM, membaca posisi institusi CFTC COT, optimasi backtesting Genetic Algorithm & Monte Carlo, serta simulasi Paper Trading aman dengan ekspor otomatis ke Excel.
+          Koleksi modular *Agent Skills* terstandarisasi untuk **Claude Code, OpenAI Codex, Antigravity, OpenCode, Cursor, dan Windsurf**. Membekali AI Agent Anda kemampuan menyadap *running trade* browser, membaca transmisi indeks global (MSCI, EIDO, CFTC COT), mendeteksi *wash trading*, memproyeksikan harga dengan Google TimesFM, dan menjalankan Paper Trading mandiri dengan ekspor jurnal Excel.
         </p>
 
         <div class="command-box">
@@ -64,210 +65,171 @@
         </div>
 
         <div class="hero-cta">
-          <a href="#skills" class="btn btn-primary btn-block" data-i18n="btnExplore">Jelajahi 13 Skills</a>
-          <a href="#whats-new" class="btn btn-outline btn-block">🚀 What's New v1.1.0</a>
+          <a href="#skills" class="btn btn-primary btn-block" data-i18n="btnExplore">Jelajahi 13 Sub-Skills</a>
+          <a href="#architecture" class="btn btn-outline btn-block">Arsitektur Tri-Layer</a>
         </div>
 
-        <!-- Metric Stat Badges (High-Contrast White Cards) -->
+        <!-- Metric Stat Badges -->
         <div class="stat-pills">
           <div class="stat-pill-item">
             <span class="stat-num">13</span>
-            <span class="stat-label" data-i18n="statSkillsSub">Modular Skills</span>
+            <span class="stat-label">Modular Sub-Skills</span>
           </div>
           <div class="stat-pill-item">
-            <span class="stat-num">0-Leak</span>
-            <span class="stat-label" data-i18n="statRiskSub">Remote CDP Safe</span>
+            <span class="stat-num">Tri-Layer</span>
+            <span class="stat-label">Decision Engine</span>
           </div>
           <div class="stat-pill-item">
             <span class="stat-num">TimesFM</span>
-            <span class="stat-label" data-i18n="statModelSub">Zero-Shot Quantiles</span>
+            <span class="stat-label">Google Foundation AI</span>
           </div>
           <div class="stat-pill-item">
-            <span class="stat-num">IDX + Multi</span>
-            <span class="stat-label" data-i18n="statMarketSub">Stocks, Crypto, Futures</span>
+            <span class="stat-num">0-Leak</span>
+            <span class="stat-label">Remote CDP Safe</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         2.5 WHAT'S NEW IN v1.1.0 (Backtest & Strategy Optimizer)
+         2.5 WHAT'S NEW IN v1.2.0 (Release Highlights)
          ========================================================================= -->
     <section id="whats-new" class="container" style="margin-top: -1rem; margin-bottom: 2.5rem;">
       <div class="feature-block" style="border: 2.5px solid var(--primary-blue); background: linear-gradient(180deg, #ffffff 0%, var(--primary-bg) 100%);">
         <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 1rem;">
           <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-            <span class="badge badge-blue">WHAT'S NEW IN v1.1.0</span>
-            <span class="badge badge-green">13TH SUB-SKILL ADDED</span>
-            <span class="badge badge-purple">QUANTITATIVE VALIDATION</span>
+            <span class="badge badge-blue">RELEASE v1.2.0</span>
+            <span class="badge badge-green">INSTITUTIONAL BENCHMARK</span>
+            <span class="badge badge-purple">ANTI-WASH TRADING</span>
           </div>
           <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Release: October 2026</span>
         </div>
 
         <h2 style="font-size: 1.45rem; color: var(--text-main); margin-bottom: 0.5rem;">
-          ⚡ Backtest Strategy Optimizer: Genetic Algorithm, WFO & Monte Carlo
+          ⚡ v1.2.0: Institutional Governance, Global Benchmark Transmission & Tri-Layer Engine
         </h2>
         <p style="font-size: 0.95rem; color: var(--text-body); margin-bottom: 1.25rem;">
-          Telah ditambahkan sub-skill kuantitatif ke-13 <code>backtest-strategy-optimizer</code> untuk membasmi <em>curve-fitting</em> (overfitting) sebelum strategi diajukan ke paper trading atau live execution.
+          Pembaruan besar ini mentransformasikan agent skills dari sekadar pembaca indikator teknikal menjadi **mesin intelijen kuantitatif berstandar institusional** yang mengevaluasi tata kelola pasar, transmisi modal global, dan integritas volume transaksi sebelum keputusan trading disetujui.
         </p>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; margin-bottom: 1.25rem;">
           <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
-            <div style="font-weight: 800; color: var(--primary-blue); font-size: 0.95rem; margin-bottom: 0.25rem;">🧬 Genetic Algorithm (GA)</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">Optimasi parameter global berbasis evolusi (kromosom, seleksi elitisme, crossover, & mutasi adaptif) untuk menghindari lokal optimum.</div>
+            <div style="font-weight: 800; color: var(--primary-blue); font-size: 0.95rem; margin-bottom: 0.25rem;">🏛️ MSCI & Global Accessibility</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Evaluasi transparansi pemilik manfaat (UBO) >1%, kepatuhan free float minimum 15%, dan filter konsentrasi semu (HSC).</div>
           </div>
           <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
-            <div style="font-weight: 800; color: var(--success-green); font-size: 0.95rem; margin-bottom: 0.25rem;">🔄 Walk-Forward Analysis (WFA)</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">Validasi In-Sample (70%) vs Out-of-Sample (30%) bergulir dengan metrik Walk-Forward Efficiency (WFE) anti-overfitting.</div>
+            <div style="font-weight: 800; color: var(--success-green); font-size: 0.95rem; margin-bottom: 0.25rem;">📈 EIDO NYSE Gap Predictor</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Menghitung selisih imbal hasil penutupan ETF Indonesia di Wall Street untuk memprediksi arah gap opening IHSG pagi hari.</div>
           </div>
           <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
-            <div style="font-weight: 800; color: var(--purple-accent); font-size: 0.95rem; margin-bottom: 0.25rem;">🎲 Monte Carlo 2.500+ Runs</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">Pengacakan urutan transaksi (Bootstrap) & slippage shock guna mengukur Risk of Ruin serta 95% & 99% Max Drawdown CI.</div>
+            <div style="font-weight: 800; color: var(--purple-accent); font-size: 0.95rem; margin-bottom: 0.25rem;">🛡️ Coordinated Trading Detector</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Deteksi transaksi melingkar antar-broker terafiliasi (wash trading). Menolak sinyal palsu yang volumenya direkayasa bandar.</div>
           </div>
           <div style="background: var(--bg-surface); border: 1.5px solid var(--border-card); border-radius: var(--radius-md); padding: 0.9rem;">
-            <div style="font-weight: 800; color: var(--warning-amber); font-size: 0.95rem; margin-bottom: 0.25rem;">💸 Model Biaya Transaksi Riil</div>
-            <div style="font-size: 0.85rem; color: var(--text-muted);">Memodelkan komisi riil (Saham IDX 0.15% beli, 0.25% jual incl. PPh final; maker/taker crypto) & spread noise.</div>
+            <div style="font-weight: 800; color: var(--warning-amber); font-size: 0.95rem; margin-bottom: 0.25rem;">🚀 Standalone Chart Server (FastAPI)</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Server web lokal mandiri berbasis FastAPI & Lightweight Charts. Dapat dibuka di browser smartphone via Wi-Fi lokal.</div>
           </div>
         </div>
 
         <div style="background: var(--code-bg); border-radius: var(--radius-md); padding: 0.85rem 1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem;">
-          <span style="font-family: var(--font-mono); color: var(--code-accent); font-size: 0.85rem;">python skills/backtest-strategy-optimizer/scripts/backtest_optimizer.py --demo</span>
-          <span class="badge badge-dark" style="border: 1px solid var(--code-string); color: var(--code-string); font-size: 0.75rem;">CLI Pre-Code Ready</span>
+          <span style="font-family: var(--font-mono); color: var(--code-accent); font-size: 0.85rem;">python skills/mobile-chart-server/scripts/mobile_server.py</span>
+          <span class="badge badge-dark" style="border: 1px solid var(--code-string); color: var(--code-string); font-size: 0.75rem;">FastAPI Local Server Ready</span>
         </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         3. INTERACTIVE SIMULATOR (Paper Trade & TimesFM Preview)
+         3. TRI-LAYER DECISION ENGINE ARCHITECTURE
          ========================================================================= -->
-    <section id="simulation" class="demo-section">
+    <section id="architecture" class="demo-section">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-purple section-tag" data-i18n="demoTag">SIMULASI HUMAN-IN-THE-LOOP</span>
-          <h2 class="section-title" data-i18n="demoTitle">Uji Coba Sinyal & Eksekusi Paper Trading</h2>
-          <p class="section-subtitle" data-i18n="demoSubtitle">
-            Lihat bagaimana AI Agent mendeteksi anomali volume, memproyeksikan rentang probabilitas TimesFM, dan meminta izin Anda sebelum mencatat order ke database SQLite & Excel.
+          <span class="badge badge-purple section-tag">ARSITEKTUR PENGAMBIL KEPUTUSAN</span>
+          <h2 class="section-title">Tri-Layer Decision Engine</h2>
+          <p class="section-subtitle">
+            Bagaimana Trading AI Agent menyaring kebisingan pasar, melindungi modal dari jebakan manipulasi, dan menghasilkan rekomendasi trading yang objektif dan terukur.
           </p>
         </div>
 
-        <div class="trade-widget">
-          <div class="widget-header">
-            <div class="widget-title">
-              <span>🎯</span>
-              <span>Simulasi Live Signal & Trailing Stop</span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <!-- Layer 1 Card -->
+          <div class="feature-block" style="border-top: 5px solid var(--danger-red); margin-bottom: 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+              <span class="badge badge-dark" style="color: var(--danger-red); border-color: var(--danger-border);">LAYER 1 (FILTER MUTLAK)</span>
+              <span style="font-size: 1.5rem;">🛡️</span>
             </div>
-            <span class="badge badge-green">LIVE FEED SIMULATED</span>
+            <h3 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 0.5rem;">Structural Governance & Market Integrity Gate</h3>
+            <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 1rem;">
+              Menyaring aset sebelum analisa teknikal dijalankan. Mencegah agent merekomendasikan aset yang tampak likuid di grafik tetapi sebenarnya digoreng melalui transaksi semu.
+            </p>
+            <ul style="font-size: 0.82rem; color: var(--text-muted); list-style: none; padding-left: 0; line-height: 1.8;">
+              <li>✔ <strong>Evaluasi Aksesibilitas MSCI/FTSE:</strong> Bebas risiko delisting & free float $\ge 15\%$.</li>
+              <li>✔ <strong>Deteksi High Shareholding Concentration (HSC):</strong> Menguji apakah saham tidak terkunci di nominee rahasia.</li>
+              <li>✔ <strong>Filter Coordinated Trading:</strong> Memeriksa Wash Volume Ratio (WVR) antar-broker.</li>
+              <li>🚨 <strong>Ketentuan:</strong> Jika Layer 1 gagal, analisis <em>otomatis dibatalkan</em> (Reject Signal).</li>
+            </ul>
           </div>
 
-          <div class="widget-body">
-            <!-- Asset Selection Tabs -->
-            <div class="instrument-selector">
-              <button class="asset-tab active" data-asset="bbca">
-                <span>BBCA (IDX)</span>
-                <small>Rp 9.850</small>
-              </button>
-              <button class="asset-tab" data-asset="antm">
-                <span>ANTM (Gold/IDX)</span>
-                <small>Rp 1.580</small>
-              </button>
-              <button class="asset-tab" data-asset="xau">
-                <span>XAU/USD (Gold)</span>
-                <small>$2,685.40</small>
-              </button>
-              <button class="asset-tab" data-asset="btc">
-                <span>BTC/USDT</span>
-                <small>$64,250</small>
-              </button>
+          <!-- Layer 2 Card -->
+          <div class="feature-block" style="border-top: 5px solid var(--primary-blue); margin-bottom: 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+              <span class="badge badge-blue">LAYER 2 (ARAH MAKRO)</span>
+              <span style="font-size: 1.5rem;">🌊</span>
             </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 0.5rem;">Institutional Benchmark & Macro Tide</h3>
+            <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 1rem;">
+              Mengidentifikasi ke mana arus modal institusi raksasa dunia sedang mengalir. Memastikan trading searah dengan gelombang dana cerdas (*smart money*).
+            </p>
+            <ul style="font-size: 0.82rem; color: var(--text-muted); list-style: none; padding-left: 0; line-height: 1.8;">
+              <li>✔ <strong>Rebalancing Indeks Global:</strong> Proyeksi arus dana pasif BlackRock & Vanguard.</li>
+              <li>✔ <strong>EIDO Leading Indicator:</strong> Membaca imbal hasil ETF Indonesia di NYSE tadi malam.</li>
+              <li>✔ <strong>Laporan CFTC COT:</strong> Memetakan posisi Commercial Hedgers vs Hedge Fund.</li>
+              <li>✔ <strong>US Treasury Watchlist & FATF:</strong> Pemantauan risiko devaluasi mata uang valas.</li>
+            </ul>
+          </div>
 
-            <!-- Chart Mockup with high contrast -->
-            <div class="chart-mockup">
-              <div class="chart-header">
-                <span id="chartSymbol" class="chart-symbol">BBCA (Bank Central Asia - IDX)</span>
-                <span id="chartPrice" class="chart-price">Rp 9.850 <span class="price-change">+1.8% today</span></span>
-              </div>
-
-              <!-- CSS Candlestick Visualization -->
-              <div class="chart-bars">
-                <div class="candle candle-up" style="height: 60%;"><div class="candle-body" style="height: 50%;"></div></div>
-                <div class="candle candle-down" style="height: 45%;"><div class="candle-body" style="height: 60%;"></div></div>
-                <div class="candle candle-up" style="height: 75%;"><div class="candle-body" style="height: 70%;"></div></div>
-                <div class="candle candle-up" style="height: 85%;"><div class="candle-body" style="height: 80%;"></div></div>
-                <div class="candle candle-down" style="height: 55%;"><div class="candle-body" style="height: 40%;"></div></div>
-                <div class="candle candle-up" style="height: 95%;"><div class="candle-body" style="height: 85%;"></div></div>
-                <div class="candle candle-up" style="height: 100%;"><div class="candle-body" style="height: 90%;"></div></div>
-              </div>
-
-              <!-- Google TimesFM Forecast Probabilities -->
-              <div class="forecast-badge-box">
-                <div class="forecast-title">
-                  <span>🧠</span>
-                  <span>Google Research TimesFM Probabilistic Forecast (Next Horizon)</span>
-                </div>
-                <div class="forecast-grid">
-                  <div>
-                    <span class="forecast-col-title">Quantile P10 (Trailing SL)</span>
-                    <div id="p10Val" class="forecast-col-val">Rp 9.680</div>
-                  </div>
-                  <div>
-                    <span class="forecast-col-title">Quantile P50 (Target Median)</span>
-                    <div id="p50Val" class="forecast-col-val" style="color: var(--primary-blue);">Rp 10.150 (+3.0%)</div>
-                  </div>
-                  <div>
-                    <span class="forecast-col-title">Quantile P90 (Optimis)</span>
-                    <div id="p90Val" class="forecast-col-val" style="color: var(--success-green);">Rp 10.350 (+5.1%)</div>
-                  </div>
-                </div>
-              </div>
+          <!-- Layer 3 Card -->
+          <div class="feature-block" style="border-top: 5px solid var(--success-green); margin-bottom: 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+              <span class="badge badge-green">LAYER 3 (EKSEKUSI MIKRO)</span>
+              <span style="font-size: 1.5rem;">🎯</span>
             </div>
+            <h3 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 0.5rem;">Micro Timing, TimesFM & Risk Budgeting</h3>
+            <p style="font-size: 0.88rem; color: var(--text-body); line-height: 1.5; margin-bottom: 1rem;">
+              Menentukan titik masuk presisi, rentang ketidakpastian matematis, rasio Risk-to-Reward, dan alokasi modal maksimal yang boleh dipertaruhkan.
+            </p>
+            <ul style="font-size: 0.82rem; color: var(--text-muted); list-style: none; padding-left: 0; line-height: 1.8;">
+              <li>✔ <strong>Google Research TimesFM:</strong> Proyeksi probabilitas Fan Chart (P10, P50, P90).</li>
+              <li>✔ <strong>Dynamic Trailing Stop:</strong> Menjaga keuntungan seiring kenaikan harga.</li>
+              <li>✔ <strong>Aturan Rasio R:R Minimal 1:2:</strong> Potensi keuntungan wajib minimal 2x lipat risiko.</li>
+              <li>✔ <strong>Sizing Berbasis Risiko 1%:</strong> Menghitung rekomendasi lot sesuai ekuitas riil.</li>
+            </ul>
+          </div>
 
-            <!-- Human-In-The-Loop Approval Ticket -->
-            <div class="approval-ticket">
-              <div class="ticket-header">
-                <span class="ticket-label" data-i18n="ticketTitle">TIKET KONFIRMASI PERSENYALAN</span>
-                <span class="badge badge-amber">WAITING USER APPROVAL</span>
-              </div>
+        </div>
 
-              <div class="ticket-details">
-                <div class="ticket-item">
-                  <span class="ticket-k">Target Harga (TP)</span>
-                  <span id="ticketTarget" class="ticket-v">Rp 10.200 (+3.5%)</span>
-                </div>
-                <div class="ticket-item">
-                  <span class="ticket-k">Trailing Stop Dinamis (SL)</span>
-                  <span id="ticketSL" class="ticket-v">Rp 9.700 (-1.5%)</span>
-                </div>
-                <div class="ticket-item">
-                  <span class="ticket-k">Alokasi Modal (Sizing)</span>
-                  <span id="ticketSize" class="ticket-v">20 Lot (Rp 19.700.000)</span>
-                </div>
-                <div class="ticket-item">
-                  <span class="ticket-k">Dasar Analisis AI</span>
-                  <span id="ticketRationale" class="ticket-v" style="font-size: 0.75rem;">Haka Volume Spike + Akumulasi Broker Asing + TimesFM Bullish</span>
-                </div>
-              </div>
-
-              <div class="ticket-actions">
-                <button id="approveTradeBtn" class="btn btn-approve" data-i18n="approveBtn">✔ Setujui Transaksi</button>
-                <button id="rejectTradeBtn" class="btn btn-reject" data-i18n="rejectBtn">✖ Tolak Sinyal</button>
-              </div>
-
-              <!-- Result Notification Feedback -->
-              <div id="ticketToast" style="display: none; margin-top: 0.75rem;"></div>
+        <!-- Plain Language Executive Verdict Format Showcase -->
+        <div style="background: var(--bg-surface); border: 2px solid var(--border-card); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-md);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1.5px solid var(--border-card); padding-bottom: 0.75rem;">
+            <div style="font-weight: 900; font-size: 1.05rem; color: var(--text-main); display: flex; align-items: center; gap: 0.4rem;">
+              <span>📋</span> Standar Luaran Rekomendasi: Plain-Language Executive Verdict
             </div>
+            <span class="badge badge-green">HUMAN-READABLE DECISION</span>
+          </div>
 
-            <!-- Virtual Portfolio Balance Tracker -->
-            <div class="portfolio-summary">
-              <div>
-                <span class="port-label">Saldo Simulasi (Paper Trading):</span>
-                <div id="simEquityVal" class="port-equity">Rp 100.000.000</div>
-              </div>
-              <div style="text-align: right;">
-                <span class="badge badge-green">SQLite Synced</span>
-                <div id="simTradesCount" class="port-pnl">0 Trades Logged</div>
-              </div>
-            </div>
+          <p style="font-size: 0.9rem; color: var(--text-body); margin-bottom: 1rem;">
+            Setiap kali selesai menganalisis, AI Agent tidak memberikan jawaban menggantung, melainkan menerbitkan ringkasan eksekutif tegas yang langsung dapat dieksekusi:
+          </p>
 
+          <div style="background: var(--bg-subtle); border-left: 5px solid var(--success-green); padding: 1rem 1.25rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.7; color: var(--text-main);">
+            <strong style="color: var(--success-green);">🟢 ACTION VERDICT: STRONG BUY (Confluence Score: 88/100)</strong><br>
+            • <strong>Instrumen:</strong> BBCA (Bank Central Asia - IDX)<br>
+            • <strong>Area Entry:</strong> Rp 9.800 - Rp 9.850 | <strong>Target Profit (TP):</strong> Rp 10.200 (+3.5%)<br>
+            • <strong>Trailing Stop Dinamis (SL):</strong> Rp 9.700 (-1.5%) | <strong>Risk/Reward:</strong> 1 : 2.33 (Memenuhi Syarat)<br>
+            • <strong>Alokasi Modal (1% Risk Rule):</strong> 20 Lot (Maks. Risiko Rugi: Rp 300.000 / Potensi Untung: +Rp 700.000)<br>
+            • <strong>Invalidation Level:</strong> Skenario bullish BATAL jika harga harian ditutup menembus &lt; Rp 9.680.<br>
+            • <strong>Dasar Konfluensi:</strong> Lolos uji free float MSCI (18.2%), WVR rendah (0.12 - bebas wash trade), EIDO NYSE +1.8%, dan TimesFM P50 bullish curve.
           </div>
         </div>
       </div>
@@ -282,7 +244,7 @@
           <span class="badge badge-blue section-tag" data-i18n="skillsTag">ARSITEKTUR LENGKAP</span>
           <h2 class="section-title" data-i18n="skillsTitle">13 Sub-Skills Kuantitatif Terpadu</h2>
           <p class="section-subtitle" data-i18n="skillsSubtitle">
-            Dapat dijalankan satu per satu atau dikoordinasikan secara otomatis oleh Trading Orchestrator.
+            Dapat dijalankan satu per satu secara independen atau dikoordinasikan secara otonom oleh Trading Orchestrator.
           </p>
         </div>
 
@@ -306,11 +268,11 @@
               </div>
               <span class="badge badge-dark">Core Master</span>
             </div>
-            <p class="skill-desc">Router utama yang menerima instruksi natural, mendistribusikan analisis ke spesialis, dan merangkum rekomendasi trading plan final.</p>
+            <p class="skill-desc">Router utama yang mengeksekusi Tri-Layer Decision Engine, merumuskan Executive Verdict, dan mengelola gerbang persetujuan transaksi.</p>
             <ul class="skill-features">
-              <li>Penyusunan Trading Plan & Risk Budgeting</li>
-              <li>Sintesis Multi-Metode (Teknikal + Makro)</li>
-              <li>Koordinasi Eksekusi & Alerting</li>
+              <li>Penyusunan Trading Plan & Tri-Layer Decision Matrix</li>
+              <li>Kalkulasi Confluence Score (0-100%) & Invalidation Point</li>
+              <li>Otorisasi Human-in-the-Loop & Alerting</li>
             </ul>
           </div>
 
@@ -326,8 +288,8 @@
             <p class="skill-desc">Pengunduh data harga historis dan intraday untuk Saham IDX, Crypto (Binance/Indodax via CCXT), Forex, dan Komoditas.</p>
             <ul class="skill-features">
               <li>Saham Bursa Efek Indonesia (IDX)</li>
-              <li>CCXT Crypto Multi-Exchange</li>
-              <li>Yahoo Finance & Public Data Feeds</li>
+              <li>CCXT Crypto Multi-Exchange Feeds</li>
+              <li>Yahoo Finance & Public Data Providers</li>
             </ul>
           </div>
 
@@ -348,7 +310,7 @@
             </ul>
           </div>
 
-          <!-- 3. browser-tape-interceptor -->
+          <!-- 4. browser-tape-interceptor -->
           <div class="skill-card" data-category="tape">
             <div class="skill-card-top">
               <div>
@@ -357,15 +319,15 @@
               </div>
               <span class="badge badge-purple">CDP Sniffer</span>
             </div>
-            <p class="skill-desc">Menempelkan sesi browser Chrome pengguna via Chrome DevTools Protocol (CDP) untuk menyadap WebSocket running trade & order book web broker tanpa risiko password.</p>
+            <p class="skill-desc">Menempelkan sesi browser Chrome pengguna via Chrome DevTools Protocol (CDP) untuk menyadap WebSocket running trade tanpa risiko menyentuh password.</p>
             <ul class="skill-features">
-              <li>Zero-Password Leak (Login Manual)</li>
+              <li>Zero-Password Leak (Login Manual Mandiri)</li>
               <li>Sniffer WebSocket Running Trade Real-Time</li>
               <li>Membaca Kedalaman Bid/Ask Orderbook</li>
             </ul>
           </div>
 
-          <!-- 4. orderflow-tape-scalper -->
+          <!-- 5. orderflow-tape-scalper -->
           <div class="skill-card" data-category="tape">
             <div class="skill-card-top">
               <div>
@@ -374,15 +336,15 @@
               </div>
               <span class="badge badge-amber">Tape Scalper</span>
             </div>
-            <p class="skill-desc">Membaca pita transaksi (tape reading) real-time: deteksi Hajar Kanan (Haka) volume masif, Iceberg orders, Fake Bid/Ask, dan Broker Summary (Bandarmologi).</p>
+            <p class="skill-desc">Membaca pita transaksi real-time: mendeteksi Haka/Haki masif, Iceberg orders, fake bid/ask spoofing, dan transaksi melingkar (wash sale).</p>
             <ul class="skill-features">
-              <li>Deteksi Akumulasi Bandar & Haka Masif</li>
-              <li>Delta Imbalance & Absorption Sinyal</li>
-              <li>Analisis Broker Summary Harian</li>
+              <li>Deteksi Coordinated Trading & Wash Volume Ratio (WVR)</li>
+              <li>Haka/Haki Delta Imbalance & Absorption</li>
+              <li>Analisis Broker Summary (Bandarmologi)</li>
             </ul>
           </div>
 
-          <!-- 5. timesfm-forecaster -->
+          <!-- 6. timesfm-forecaster -->
           <div class="skill-card" data-category="ai">
             <div class="skill-card-top">
               <div>
@@ -393,126 +355,126 @@
             </div>
             <p class="skill-desc">Menjalankan foundation model Google TimesFM (PyTorch) untuk proyeksi pergerakan harga probabilistik zero-shot beserta rentang quantile (P10, P50, P90).</p>
             <ul class="skill-features">
-              <li>Zero-Shot Time-Series Forecasting</li>
+              <li>Zero-Shot Time-Series Foundation Forecasting</li>
               <li>Quantile P10 untuk Trailing Stop Dinamis</li>
-              <li>Mode Cepat GPU & Fallback CPU Ringan</li>
+              <li>Rentang Ketidakpastian Matematis Masa Depan</li>
             </ul>
           </div>
 
-          <!-- 6. cftc-cot-tracker -->
+          <!-- 7. cftc-cot-tracker -->
           <div class="skill-card" data-category="market">
             <div class="skill-card-top">
               <div>
                 <h3 class="skill-name">cftc-cot-tracker</h3>
                 <span class="skill-path">skills/cftc-cot-tracker</span>
               </div>
-              <span class="badge badge-amber">Institusi COT</span>
+              <span class="badge badge-amber">Smart Money</span>
             </div>
-            <p class="skill-desc">Mengunduh laporan mingguan resmi CFTC Commitment of Traders, menghitung COT Index (0-100%), dan mengaitkan posisi komoditas global ke saham tambang & energi IDX.</p>
+            <p class="skill-desc">Mengunduh laporan mingguan CFTC Commitment of Traders (COT). Melacak posisi institusi hedge fund pada komoditas dan memetakan dampaknya ke saham IDX.</p>
             <ul class="skill-features">
-              <li>Pelacak Posisi Hedge Fund & Commercials</li>
-              <li>Jembatan Emas/Minyak CFTC ke ANTM, MEDC, ADRO</li>
-              <li>Deteksi Titik Balik Ekstrem (Extreme Overbought)</li>
+              <li>Pelacakan Posisi Net Commercial vs Non-Commercial</li>
+              <li>Perhitungan COT Index Oscillator</li>
+              <li>Pemetaan Komoditas ke Emiten Saham Terkait</li>
             </ul>
           </div>
 
-          <!-- 7. economic-news-trader -->
-          <div class="skill-card" data-category="market">
-            <div class="skill-card-top">
-              <div>
-                <h3 class="skill-name">economic-news-trader</h3>
-                <span class="skill-path">skills/economic-news-trader</span>
-              </div>
-              <span class="badge badge-blue">News & NFP</span>
-            </div>
-            <p class="skill-desc">Memantau kalender ekonomi berdampak tinggi (NFP, Inflasi AS, Suku Bunga The Fed, BI-Rate). Menerapkan Pre-News Shield dan Post-Release Momentum Scalping.</p>
-            <ul class="skill-features">
-              <li>Pre-News Shield (Kunci Profit Sebelum Rilis)</li>
-              <li>Kalkulasi Deviasi Surprise Actual vs Forecast</li>
-              <li>Anti-Slippage & Spread Widening Guard</li>
-            </ul>
-          </div>
-
-          <!-- 8. technical-analyst -->
-          <div class="skill-card" data-category="market">
-            <div class="skill-card-top">
-              <div>
-                <h3 class="skill-name">technical-analyst</h3>
-                <span class="skill-path">skills/technical-analyst</span>
-              </div>
-              <span class="badge badge-dark">Technical Analysis</span>
-            </div>
-            <p class="skill-desc">Menghitung Moving Averages, RSI, MACD, Bollinger Bands, Supply & Demand, dan peta likuiditas Smart Money Concepts (SMC).</p>
-            <ul class="skill-features">
-              <li>Indikator Kuantitatif Lengkap</li>
-              <li>Smart Money Concepts (SMC) & FVG</li>
-              <li>Support & Resistance Otomatis</li>
-            </ul>
-          </div>
-
-          <!-- 9. fundamental-macro-analyst -->
+          <!-- 8. fundamental-macro-analyst -->
           <div class="skill-card" data-category="market">
             <div class="skill-card-top">
               <div>
                 <h3 class="skill-name">fundamental-macro-analyst</h3>
                 <span class="skill-path">skills/fundamental-macro-analyst</span>
               </div>
-              <span class="badge badge-blue">Fundamental</span>
+              <span class="badge badge-blue">Macro & Valuasi</span>
             </div>
-            <p class="skill-desc">Menghitung rasio keuangan emiten (PER, PBV, ROE, DER, DCF) dan menganalisis korelasi antar pasar (DXY vs Rupiah vs IHSG vs Yield US Treasury).</p>
+            <p class="skill-desc">Menilai tata kelola benchmark global (MSCI, EIDO Gap, US Treasury FX Watchlist), valuasi emiten (PER, PBV, ROE), dan korelasi makro (DXY, Yield, BI-Rate).</p>
             <ul class="skill-features">
-              <li>Valuasi Rasio Finansial Emiten</li>
-              <li>Korelasi Makro Global ke Rupiah & IHSG</li>
-              <li>Peringkat Kesehatan Keuangan Perusahaan</li>
+              <li>Evaluasi Aksesibilitas MSCI, Free Float & UBO >1%</li>
+              <li>EIDO-to-IHSG NYSE Gap Opening Predictor</li>
+              <li>Audit Tokenomics (Gini Wallet Paus & Low Float Trap)</li>
             </ul>
           </div>
 
-          <!-- 10. paper-trading-engine -->
+          <!-- 9. economic-news-trader -->
+          <div class="skill-card" data-category="market">
+            <div class="skill-card-top">
+              <div>
+                <h3 class="skill-name">economic-news-trader</h3>
+                <span class="skill-path">skills/economic-news-trader</span>
+              </div>
+              <span class="badge badge-dark">News Shield</span>
+            </div>
+            <p class="skill-desc">Memantau kalender ekonomi berdampak tinggi (NFP, CPI AS, FOMC, BI-Rate). Menerapkan Pre-News Shield dan perhitungan deviasi Actual vs Forecast.</p>
+            <ul class="skill-features">
+              <li>Pre-News Shield (Proteksi 15 Menit Sebelum Rilis)</li>
+              <li>Kalkulasi Deviasi Surprise Berita</li>
+              <li>Pelindung Slippage Pelebaran Spread Broker</li>
+            </ul>
+          </div>
+
+          <!-- 10. technical-analyst -->
+          <div class="skill-card" data-category="market">
+            <div class="skill-card-top">
+              <div>
+                <h3 class="skill-name">technical-analyst</h3>
+                <span class="skill-path">skills/technical-analyst</span>
+              </div>
+              <span class="badge badge-green">Chart Technical</span>
+            </div>
+            <p class="skill-desc">Analis teknikal multi-metode: indikator klasik (EMA, RSI, MACD, Bollinger), Price Action, Supply & Demand, dan likuiditas Smart Money Concepts (SMC/ICT).</p>
+            <ul class="skill-features">
+              <li>Smart Money Concepts (Liquidity Sweep & FVG)</li>
+              <li>Indikator Klasik & Divergensi Momentum</li>
+              <li>Pemetaan Level Support / Resistance Kunci</li>
+            </ul>
+          </div>
+
+          <!-- 11. paper-trading-engine -->
           <div class="skill-card" data-category="risk">
             <div class="skill-card-top">
               <div>
                 <h3 class="skill-name">paper-trading-engine</h3>
                 <span class="skill-path">skills/paper-trading-engine</span>
               </div>
-              <span class="badge badge-green">Paper & Excel</span>
+              <span class="badge badge-green">Paper Engine</span>
             </div>
-            <p class="skill-desc">Menjalankan simulasi transaksi lokal (SQLite), kalkulasi fee dan slippage realistis, manajemen trailing stop, dan otomatis membuat berkas Excel (.xlsx).</p>
+            <p class="skill-desc">Simulator portofolio trading offline berbasis SQLite lokal. Memodelkan komisi fee dan slippage likuiditas riil, serta ekspor jurnal trading terformat ke Excel (.xlsx).</p>
             <ul class="skill-features">
-              <li>Model Likuiditas & Fee Realistis</li>
-              <li>Penyimpanan Lokal Mandiri (SQLite .db)</li>
-              <li>Auto-Export Jurnal Excel (.xlsx) Lengkap</li>
+              <li>Database Portofolio SQLite Lokal Mandiri</li>
+              <li>Pemodelan Biaya Komisi & Slippage Riil</li>
+              <li>Ekspor Jurnal Otomatis ke Spreadsheet Excel</li>
             </ul>
           </div>
 
-          <!-- 11. mobile-chart-server -->
+          <!-- 12. mobile-chart-server -->
           <div class="skill-card" data-category="risk">
             <div class="skill-card-top">
               <div>
                 <h3 class="skill-name">mobile-chart-server</h3>
                 <span class="skill-path">skills/mobile-chart-server</span>
               </div>
-              <span class="badge badge-green">Mobile-First GUI</span>
+              <span class="badge badge-purple">FastAPI Server</span>
             </div>
-            <p class="skill-desc">Server dashboard lokal mandiri berbasis FastAPI + TradingView Lightweight Charts dengan tampilan responsif berorientasi Mobile-View First.</p>
+            <p class="skill-desc">Server dashboard web mandiri berbasis FastAPI dan TradingView Lightweight Charts dengan desain responsif Mobile-View First dan Tri-Pane Desktop.</p>
             <ul class="skill-features">
-              <li>TradingView Lightweight Charts Responsif</li>
-              <li>Desain Touch-Friendly Smartphone & Tablet</li>
-              <li>Tri-Channel Approval (Terminal / Web / Telegram)</li>
+              <li>Backend FastAPI Lokal Mandiri (Port 8000)</li>
+              <li>Akses Smartphone via Wi-Fi Jaringan Lokal</li>
+              <li>Integrasi Langsung ke Database Paper Trading SQLite</li>
             </ul>
           </div>
 
-          <!-- 12. agent-update-manager -->
+          <!-- 13. agent-update-manager -->
           <div class="skill-card" data-category="risk">
             <div class="skill-card-top">
               <div>
                 <h3 class="skill-name">agent-update-manager</h3>
                 <span class="skill-path">skills/agent-update-manager</span>
               </div>
-              <span class="badge badge-purple">Auto-Update 24h</span>
+              <span class="badge badge-blue">Auto-Update</span>
             </div>
             <p class="skill-desc">Pengecekan pembaruan berkala ke GitHub resmi otomatis sekali sehari (24h throttle cache) dengan proteksi kredensial .env dan konfirmasi pengguna.</p>
             <ul class="skill-features">
-              <li>Pengecekan Otomatis 1 Hari Sekali (Cache <5ms)</li>
+              <li>Pengecekan Otomatis 1 Hari Sekali (&lt;5ms Cache)</li>
               <li>Proteksi .env & Database Lokal Anti-Overwrite</li>
               <li>Konfirmasi Persetujuan Pengguna (Human-in-the-Loop)</li>
             </ul>
@@ -523,19 +485,125 @@
     </section>
 
     <!-- =========================================================================
-         5. FEATURE DEEP-DIVE: TIMESFM & CFTC COT
+         5. STANDALONE LOCAL CHART SERVER SHOWCASE (Real CLI & FastAPI)
          ========================================================================= -->
-    <section id="features" class="features-section">
+    <section id="chart-server" class="demo-section" style="background: var(--bg-surface); border-top: 2px solid var(--border-card); border-bottom: 2px solid var(--border-card);">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-amber section-tag">DEEP DIVE TEKNOLOGI</span>
-          <h2 class="section-title">Keunggulan Kuantitatif Kelas Institusi</h2>
+          <span class="badge badge-green section-tag">LOCAL STANDALONE RUNNER</span>
+          <h2 class="section-title">Standalone Chart Server (FastAPI)</h2>
           <p class="section-subtitle">
-            Kombinasi model AI Time-Series terbaru dari Google Research dan transparansi data bursa berjangka Amerika Serikat.
+            Bukan gimmick frontend web. Anda dapat menjalankan server visual mandiri langsung dari terminal komputer Anda dan membukanya dari smartphone lewat Wi-Fi lokal.
           </p>
         </div>
 
-        <!-- TimesFM Block -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; align-items: center;">
+          <div>
+            <h3 style="font-size: 1.35rem; color: var(--text-main); margin-bottom: 0.75rem;">
+              🚀 Menjalankan Server Mandiri di Komputer Anda
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
+              Modul <code>mobile-chart-server</code> menyertakan skrip backend berbasis <strong>FastAPI dan Uvicorn</strong>. Server ini menyajikan REST API data pasar, proyeksi TimesFM, radar benchmark global, serta otorisasi transaksi yang tersambung langsung ke database SQLite <code>paper-trading-engine</code>.
+            </p>
+
+            <div style="background: var(--code-bg); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem; border: 2px solid var(--border-card);">
+              <div style="color: var(--code-text); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.8;">
+                <span style="color: var(--text-muted);"># 1. Jalankan via Python:</span><br>
+                <span style="color: var(--code-accent);">python skills/mobile-chart-server/scripts/mobile_server.py</span><br><br>
+                <span style="color: var(--text-muted);"># 2. Atau jalankan via NPM:</span><br>
+                <span style="color: var(--code-accent);">npm run chart-server</span>
+              </div>
+            </div>
+
+            <ul style="font-size: 0.85rem; color: var(--text-body); list-style: none; padding-left: 0; line-height: 2;">
+              <li>📱 <strong>Akses Smartphone:</strong> Buka <code>http://&lt;IP-Komputer&gt;:8000</code> dari browser HP Anda.</li>
+              <li>🖥️ <strong>Akses Desktop:</strong> Buka <code>http://localhost:8000</code> untuk tampilan Tri-Pane Pro Terminal.</li>
+              <li>🔒 <strong>Zero-Credential Leak:</strong> Sisi klien hanya menerima visual angka JSON tanpa pernah menyentuh API key broker.</li>
+            </ul>
+          </div>
+
+          <!-- Terminal Output Simulation Card -->
+          <div style="background: #0f172a; border-radius: var(--radius-md); border: 2px solid #334155; padding: 1.25rem; font-family: var(--font-mono); color: #f8fafc; font-size: 0.82rem; line-height: 1.7; box-shadow: var(--shadow-lg);">
+            <div style="display: flex; gap: 6px; margin-bottom: 0.75rem;">
+              <span style="width: 11px; height: 11px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+              <span style="width: 11px; height: 11px; border-radius: 50%; background: #f59e0b; display: inline-block;"></span>
+              <span style="width: 11px; height: 11px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+              <span style="margin-left: 8px; color: #94a3b8; font-size: 0.75rem;">terminal - mobile_server.py</span>
+            </div>
+            <div style="color: #38bdf8;">=================================================================</div>
+            <div style="color: #4ade80; font-weight: bold;">📈 TRADING AI AGENT SKILLS - MOBILE CHART SERVER v1.2.0</div>
+            <div style="color: #38bdf8;">=================================================================</div>
+            <div style="color: #f1f5f9;">✔ Desktop URL : <span style="color: #60a5fa; text-decoration: underline;">http://localhost:8000</span></div>
+            <div style="color: #f1f5f9;">✔ Mobile Wi-Fi: <span style="color: #60a5fa; text-decoration: underline;">http://192.168.1.15:8000</span> (Buka dari Smartphone)</div>
+            <div style="color: #f1f5f9;">✔ Database    : paper-trading-engine/paper_trading.db (SQLite)</div>
+            <div style="color: #f1f5f9;">✔ Protocol    : Zero-Credential Exposure ACTIVE</div>
+            <div style="color: #38bdf8;">=================================================================</div>
+            <div style="color: #94a3b8;">INFO: Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)</div>
+            <div style="color: #94a3b8;">INFO: Application startup complete.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. GLOBAL BENCHMARK TRANSMISSION & INTERMARKET
+         ========================================================================= -->
+    <section id="benchmarks" class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-amber section-tag">TRANSMISI PASAR GLOBAL</span>
+          <h2 class="section-title">Matriks Benchmark Institusional Lintas Aset</h2>
+          <p class="section-subtitle">
+            Bagaimana standar acuan dan regulasi global menentukan ke mana modal triliunan dollar mengalir atau dilikuidasi paksa.
+          </p>
+        </div>
+
+        <div class="table-responsive" style="margin-bottom: 2rem;">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Kelas Aset</th>
+                <th>Benchmark / Regulator Acuan</th>
+                <th>Kriteria Penilaian Kuantitatif</th>
+                <th>Dampak Transmisi ke Pasar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Saham (IDX & EM)</strong></td>
+                <td>MSCI Emerging Markets & FTSE Russell</td>
+                <td>Free float riil $\ge 15\%$, transparansi pemilik manfaat (UBO) >1%, likuiditas ATVR, batas konsentrasi (HSC).</td>
+                <td>Passive ETF inflows ratusan miliar rupiah saat inklusi; *forced liquidation* masif jika terjadi downgrade ke Standalone Market.</td>
+              </tr>
+              <tr>
+                <td><strong>Saham Global</strong></td>
+                <td>iShares MSCI Indonesia ETF (EIDO di NYSE)</td>
+                <td>Pergerakan harga penutupan EIDO di bursa New York (buka malam hari WIB).</td>
+                <td>Leading indicator: Selisih penutupan EIDO memproyeksikan potensi Gap Opening IHSG dan saham Big-4 perbankan jam 09.00 WIB.</td>
+              </tr>
+              <tr>
+                <td><strong>Forex (Valas)</strong></td>
+                <td>US Treasury FX Manipulator & FATF</td>
+                <td>Surplus dagang bilateral >\$15M, transaksi berjalan >3% PDB, dan intervensi valas sepihak >2% PDB.</td>
+                <td>Forced appreciation mata uang negara yang diawasi; kenaikan premi risiko pinjaman perbankan jika masuk Grey List FATF.</td>
+              </tr>
+              <tr>
+                <td><strong>Komoditas</strong></td>
+                <td>CFTC Commitment of Traders (COT) & LME</td>
+                <td>Posisi bersih Commercial Hedgers (produsen) vs Managed Money (spekulan), ketersediaan stok fisik gudang LME/COMEX.</td>
+                <td>Pembalikan arah tren harga komoditas (Macro Turning Point) dan diskon harga fisik jika gagal standar sertifikasi.</td>
+              </tr>
+              <tr>
+                <td><strong>Crypto</strong></td>
+                <td>SEC Howey Test & Tokenomics HSC</td>
+                <td>Rasio Gini wallet paus, jebakan Low Float/High FDV (Float &lt;10%), dan kalender Token Unlock.</td>
+                <td>Delisting dari bursa teregulasi jika dicap Securities; keruntuhan likuiditas saat banjir token vesting orang dalam.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TimesFM Comparison Block -->
         <div class="feature-block">
           <h3><span>🧠</span> Google Research TimesFM vs Indikator Konvensional</h3>
           <p>Indikator klasik (RSI, MACD) bersifat tertinggal (*lagging*). TimesFM adalah *decoder-only foundation model* yang memproyeksikan lintasan harga ke depan dengan interval ketidakpastian matematis.</p>
@@ -570,45 +638,11 @@
           </div>
         </div>
 
-        <!-- CFTC COT Block -->
-        <div class="feature-block">
-          <h3><span>🏛️</span> CFTC Commitment of Traders: Komoditas ke Saham IDX</h3>
-          <p>Membaca posisi uang miliaran dollar institusi hedge fund pada kontrak berjangka di bursa New York/Chicago dan menerjemahkannya ke saham emiten Indonesia:</p>
-
-          <div class="table-responsive">
-            <table class="compare-table">
-              <thead>
-                <tr>
-                  <th>Instrumen CFTC COT</th>
-                  <th>Kategori Institusi Utama</th>
-                  <th>Saham Terkait di IDX (Bursa Efek Indonesia)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Gold Futures (COMEX)</strong></td>
-                  <td>Commercials (Mining producers) vs Managed Money</td>
-                  <td><strong>ANTM, MDKA, PSAB, ARCI</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>Crude Oil WTI (NYMEX)</strong></td>
-                  <td>Oil Producers vs Hedge Funds</td>
-                  <td><strong>MEDC, ENRG, PGAS, RAJA</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>US Dollar Index (DXY)</strong></td>
-                  <td>Foreign Currency Arbitrageurs</td>
-                  <td><strong>BBCA, BBRI, BMRI (Arus Dana Asing)</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- =========================================================================
-         6. SECURITY & PRIVACY CARD (User Global Rule)
+         7. SECURITY & PRIVACY PROTOCOL
          ========================================================================= -->
     <section id="security" class="container">
       <div class="security-banner">
@@ -619,7 +653,7 @@
             <span class="badge badge-dark">Zero-Exposure Rule</span>
           </div>
         </div>
-        <p>Sistem ini dirancang dengan prinsip keamanan data paling ketat untuk melindungi akun finansial dan aset pengguna:</p>
+        <p>Sistem ini dirancang dengan prinsip keamanan data paling ketat untuk melindungi akun finansial dan kredensial pengguna:</p>
         <ul class="security-list">
           <li>
             <span>🔒</span>
@@ -638,7 +672,7 @@
     </section>
 
     <!-- =========================================================================
-         7. INSTALLATION TABS
+         8. INSTALLATION GUIDE
          ========================================================================= -->
     <section id="install" class="demo-section">
       <div class="container">
@@ -671,24 +705,25 @@ claude
   </main>
 
   <!-- =========================================================================
-       8. FOOTER
+       9. FOOTER
        ========================================================================= -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-brand">Trading AI Agent Skills Suite</div>
+          <div class="footer-brand">Trading AI Agent Skills Suite v1.2.0</div>
           <p style="margin-top: 0.35rem; font-size: 0.85rem; max-width: 420px;">
-            Paket keahlian kuantitatif terstandarisasi untuk multi-market trading dengan Google TimesFM, CFTC COT, dan Paper Trading lokal.
+            Paket keahlian kuantitatif terstandarisasi untuk multi-market trading dengan Google TimesFM, CFTC COT, MSCI Governance, dan Paper Trading lokal.
           </p>
         </div>
         <div>
           <h4 style="margin-bottom: 0.5rem; font-size: 0.95rem;">Navigasi Cepat</h4>
           <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
             <li><a href="#hero">Beranda</a></li>
-            <li><a href="#whats-new">What's New (v1.1.0)</a></li>
-            <li><a href="#simulation">Simulasi Interaktif</a></li>
+            <li><a href="#whats-new">What's New v1.2.0</a></li>
+            <li><a href="#architecture">Tri-Layer Decision Engine</a></li>
             <li><a href="#skills">Daftar 13 Skills</a></li>
+            <li><a href="#chart-server">Standalone Chart Server</a></li>
             <li><a href="README.md">Dokumentasi README.md</a></li>
           </ul>
         </div>
@@ -696,7 +731,7 @@ claude
 
       <div class="footer-bottom">
         <div>© 2026 Trading AI Agent Skills Team. Licensed under MIT License.</div>
-        <div>Designed with 100% High-Contrast Light Mode & Mobile-View First.</div>
+        <div>Designed with 100% High-Contrast Light Mode, Zero Gimmicks, & Mobile-View First.</div>
       </div>
     </div>
   </footer>

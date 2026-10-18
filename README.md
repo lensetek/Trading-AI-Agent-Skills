@@ -12,6 +12,7 @@
 ---
 
 ### 🌐 Language Quick Navigation / Pintasan Bahasa
+* **🔥 [What's New in v1.2.0 / Apa yang Baru di v1.2.0](#-whats-new-in-v120--apa-yang-baru-di-v120)**
 * **🚀 [What's New in v1.1.0 / Apa yang Baru di v1.1.0](#-whats-new-in-v110--apa-yang-baru-di-v110)**
 * **🇮🇩 [Bahasa Indonesia](#-bahasa-indonesia)**
   * [1. Ringkasan Eksekutif](#1-ringkasan-eksekutif)
@@ -30,7 +31,29 @@
 
 ---
 
-### 🚀 What's New in v1.1.0 / Apa yang Baru di v1.1.0
+### 🔥 What's New in v1.2.0 / Apa yang Baru di v1.2.0
+
+* **🏛️ Global Benchmark & Institutional Governance Radar**:
+  * **Kriteria Aksesibilitas MSCI & FTSE**: Evaluasi keterbukaan pemilik manfaat (UBO) di atas 1%, batasan *free float* minimum 15% (FIF), dan deteksi risiko konsentrasi kepemilikan semu (*High Shareholding Concentration / HSC*).
+  * **EIDO Arbitrage & Gap-Opening Predictor**: Menghitung selisih imbal hasil penutupan ETF EIDO di New York (NYSE) untuk memprediksi arah pembukaan (*gap up / gap down*) IHSG dan saham Big-4 perbankan (`BBCA`, `BBRI`, `BMRI`, `TLKM`).
+  * **Transmisi Makro Lintas Aset**: Memetakan kriteria *US Treasury FX Manipulator Watchlist* (Forex), audit ketersediaan stok fisik gudang LME/COMEX (Komoditas), serta audit Tokenomics & rasio Gini wallet paus (Crypto).
+* **🛡️ Coordinated Trading & Wash Sale Detection Module**:
+  * Algoritma membaca transaksi pita (*tape reading*) di `orderflow-tape-scalper` untuk mendeteksi transaksi melingkar antar-broker terafiliasi (*circular cross trading*) dan memfilter volume palsu (*Wash Volume Ratio / WVR*).
+* **🧠 Tri-Layer Decision Engine & Plain-Language Verdict**:
+  * Arsitektur pengambilan keputusan 3-lapis di `trading-orchestrator`:
+    1. *Layer 1*: Filter Kelayakan Tata Kelola & Anti-Manipulasi (HSC / Wash Sale / Regulatory Risk).
+    2. *Layer 2*: Arah Arus Modal Institusi Global (MSCI Rebalancing, CFTC COT, ETF Inflows).
+    3. *Layer 3*: Waktu Eksekusi Mikro, TimesFM Probabilistik, dan Optimasi Sizing.
+  * Menghasilkan arahan tegas dalam bahasa manusia (`🟢 STRONG BUY`, `🟡 WAIT`, `🔴 AVOID`), Confluence Score (0-100%), serta *Invalidation Rule* eksplisit.
+* **📱🖥️ Decision-First Adaptive Pro Terminal**:
+  * **Interactive Canvas Candlestick Engine**: Candlestick High-DPI riil dengan volume bars, grid harga, dan *crosshair tooltip*.
+  * **Visual Decision Overlays**: Garis Entry Zone, Target TP, Stop Loss, Dynamic Trailing Stop, dan **TimesFM Confidence Fan (P10-P90 Shaded Area)** langsung di atas grafik.
+  * **Kalkulator Manajemen Risiko Riil**: Menghitung rasio Risk-to-Reward (R:R), estimasi nominal rupiah/USD maksimal kerugian jika kena SL, dan rekomendasi ukuran lot berbasis batas risiko 1-2% modal.
+  * **Adaptive Layout**: Mobile-View First yang otomatis membuka menjadi **Tri-Pane Pro Terminal** di layar laptop/desktop ($\ge 1024\text{px}$).
+* **⚡ Standalone Server Mandiri (`skills/mobile-chart-server/scripts/mobile_server.py`)**:
+  * Server lokal berbasis **FastAPI & Uvicorn** yang menyajikan REST API data pasar dan antarmuka web mandiri yang bisa dibuka langsung di smartphone lewat jaringan Wi-Fi lokal.
+
+---
 
 * **✨ Sub-Skill Baru ke-13: `backtest-strategy-optimizer`**
   * **Vectorized Backtesting Engine**: Mesin simulasi historis berkecepatan tinggi dengan pemodelan biaya bursa nyata (Saham IDX 0.15% beli, 0.25% jual incl. PPh final; maker/taker fee Crypto) serta slippage spread.
